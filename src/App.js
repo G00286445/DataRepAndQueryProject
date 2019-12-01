@@ -11,6 +11,7 @@ import AddPlayer from './components/addPlayer';
 import View from './components/view';
 import AddUser from './components/addUser';
 import LogIn from './components/logIn';
+import Poster from './components/poster';
 
 // Class inherits from react.component
 // Import Nav bar for all components
@@ -26,6 +27,7 @@ class App extends React.Component {
               <Nav.Link href="/logIn">Log In</Nav.Link>
               <Nav.Link href="/view">View Players</Nav.Link>
               <Nav.Link href="/addPlayer">Add Player</Nav.Link>
+              <Nav.Link href="/poster">View Poster</Nav.Link>
             </Nav>
           </Navbar>
           <Switch>
@@ -34,12 +36,12 @@ class App extends React.Component {
             <Route path="/logIn" component={LogIn} />
             <Route path="/addPlayer" component={AddPlayer} />
             <Route path="/view" component={View} />
-          </Switch>
-          
+            <Route path="/poster" component={Poster} />
+            
+          </Switch>  
         </div>
       </BrowserRouter>
-    );
-    
+    );   
   }
 }
 
