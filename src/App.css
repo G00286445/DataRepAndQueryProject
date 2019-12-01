@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: deepskyblue;
+
 }
 
 .App-logo {
@@ -20,3 +22,11 @@
 .App-link {
   color: #09d3ac;
 }
+
+.App-content{
+  font-style: italic;
+  color: aliceblue;
+  
+}
+
+

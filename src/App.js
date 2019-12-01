@@ -9,6 +9,8 @@ import { Navbar, Nav } from 'react-bootstrap'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import AddPlayer from './components/addPlayer';
 import View from './components/view';
+import AddUser from './components/addUser';
+import LogIn from './components/logIn';
 
 // Class inherits from react.component
 // Import Nav bar for all components
@@ -20,12 +22,16 @@ class App extends React.Component {
           <Navbar bg="primary" variant="dark">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/addUser">Create Account</Nav.Link>
+              <Nav.Link href="/logIn">Log In</Nav.Link>
               <Nav.Link href="/view">View Players</Nav.Link>
               <Nav.Link href="/addPlayer">Add Player</Nav.Link>
             </Nav>
           </Navbar>
           <Switch>
             <Route exact path="/" component={Content} />
+            <Route path="/addUser" component={AddUser} />
+            <Route path="/logIn" component={LogIn} />
             <Route path="/addPlayer" component={AddPlayer} />
             <Route path="/view" component={View} />
           </Switch>

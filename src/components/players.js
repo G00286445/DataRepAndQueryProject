@@ -1,13 +1,13 @@
 import React from 'react';
 import '../App.css';
-import PlayerItems from './playerItem';
+import PlayerItem from './playerItem';
 
 class Players extends React.Component {
 
-    render() {
-        return this.props.myPlayers.map((player)=>
-        {
-            return <PlayerItems id={player.id} player={player}></PlayerItems>
+    render(){
+        return this.props.myPlayers.map((player)=>{
+            //console.log({player});
+            return <PlayerItem key={player._id} player={player}></PlayerItem>
         });
     }
 }
