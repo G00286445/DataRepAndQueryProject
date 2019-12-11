@@ -20,7 +20,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar bg="primary" variant="dark">
+          <Navbar bg="dark" variant="dark">
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/addUser">Create Account</Nav.Link>

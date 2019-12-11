@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  background-color: deepskyblue;
-
+  background-color: blue;
 }
 
 .App-logo {
@@ -26,6 +25,7 @@
 .App-content{
   font-style: italic;
   color: aliceblue;
+  background-color: blue;
   
 }
 
