@@ -4,16 +4,18 @@ import Players from './players';
 import axios from 'axios';
 
 class View extends React.Component {
-    state = { players: [] }
+    state = { 
+        players: [] 
+    };
 
     componentDidMount(){
         axios.get('http://localhost:4000/api/players')
         .then(response => {
             this.setState({ players: response.data.players});
         })
-        .catch(function (error) {
+        .catch((error)=>{
             console.log(error);
-        })
+        });
     }
 render() {
     return (

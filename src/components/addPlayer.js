@@ -16,7 +16,7 @@ class AddPlayer extends React.Component {
         this.handlePlayerNameChange = this.handlePlayerNameChange.bind(this);
         this.handlePlayerRankChange = this.handlePlayerRankChange.bind(this);
         this.handlePlayerBrandChange = this.handlePlayerBrandChange.bind(this);
-    }
+        }
          handlePlayerNameChange(e){
         this.setState({Name: e.target.value});
         }

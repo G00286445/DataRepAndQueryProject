@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import poster from './poster';
 
 export class Poster extends Component{
     render(){
         return(
             <div>
-                 <img src="public\poster.jpg"></img>
+                 <img src="src\components\poster.js"></img>
             </div>
         );
     }

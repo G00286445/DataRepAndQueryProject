@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const mongoDB = 'mongodb+srv://admin:admin@cluster0-epnsb.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser:true});
 
-app.use(express.static(path.join(__dirname, 'build//static')));
+app.use(express.static(path.join(__dirname, '../build')));
 app.use('/static', express.static(path.join(__dirname, 'build//static')));
 
 app.use(cors());
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false}))
 
 app.use(bodyParser.json())
 
-const schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const PlayerSchema = new Schema ({
     name: String,
@@ -34,8 +34,8 @@ const PlayerSchema = new Schema ({
     brand: String
 })
 
-const playerModel = mongoose.model('ball', playerSchema);
-const proPlayerModel = mongoose.model('pro', playerSchema);
+const playerModel = mongoose.model('ball', PlayerSchema);
+const proPlayerModel = mongoose.model('pro', PlayerSchema);
 
 app.get('/whatever', (req, res) =>{
     res.send('whatever')
